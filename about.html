@@ -1,0 +1,153 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About page</title>
+    <link rel="stylesheet" href="masjid.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+      <label class="logo">
+        <i class="fas fa-mosque"></i> Al-masjid an nabawiy
+      </label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" class="active">About</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="location.html">Location</a></li>
+      </ul>
+    </nav>
+    <div class="Aboutcontent">
+      <h1>المسجد النبوي</h1>
+      <h1 class="anb">About</h1>
+      <p>
+        Al-Masjid an-Nabawi (Arabic: المسجد النبوي‎, lit. 'The Prophetic
+        Mosque'), known in English as The Prophet's Mosque, and also known as Al
+        Haram, Al Haram Al Madani and Al Haram Al Nabawi by locals, is a mosque
+        built by the Islamic prophet Muhammad in the city of Medina in the Al
+        Madinah Province of Saudi Arabia. It was the second mosque built by
+        Muhammad in Medina, after Masjid Quba'a, and is the second largest
+        mosque and second holiest site in Islam, both titles ranking after the
+        Masjid al-Haram in Mecca. It is generally open regardless of date or
+        time, and has only been closed to visitors once in modern times, as
+        Ramadan approached during the 2020 COVID-19 pandemic.
+      </p>
+    </div>
+    <style>
+      .mySlides {display: none;}
+  .image{
+    vertical-align: middle;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left:5px;
+    margin-right: 0;
+    
+  }
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1500px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 60s ease;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  @media screen and (max-width:958px){
+   .mySlides img{
+     height: 400px;
+     margin-top: 0px;
+     opacity: 1;
+   }
+  }
+ 
+
+  </style>
+  <div class="slideshow-container">
+  
+    <div class="mySlides fade">
+      <img src="img/masjid1.jpg" style="width:100%" class="image">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="img/masjid2.jfif" style="width:100%" class="image">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="img/masjid3.jpg" style="width:100%" class="image">
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+     
+    
+    <script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+    </script>
+  
+    <footer>
+        <div class="links">
+            <a href="#"><i class="fab fa-twitter-square"></i></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+          </div>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">History</a></li>
+        <li><a href="">Location</a></li>
+      </ul>
+      <p class="copyright">Salafisignature@2021</p>
+      <p class="copyright">ajibolasheriffdeen02@gmail.com</p>
+    </footer>
+  </body>
+</html>
